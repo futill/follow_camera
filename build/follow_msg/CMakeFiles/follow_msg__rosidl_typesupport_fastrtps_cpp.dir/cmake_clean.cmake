@@ -1,0 +1,25 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/get_red_dot_position__type_support.cpp.o"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/get_red_dot_position__type_support.cpp.o.d"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tape_tracker__type_support.cpp.o"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tape_tracker__type_support.cpp.o.d"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tracker__type_support.cpp.o"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tracker__type_support.cpp.o.d"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/track_red_dot__type_support.cpp.o"
+  "CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/track_red_dot__type_support.cpp.o.d"
+  "libfollow_msg__rosidl_typesupport_fastrtps_cpp.pdb"
+  "libfollow_msg__rosidl_typesupport_fastrtps_cpp.so"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/get_red_dot_position__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tape_tracker__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/reset_tracker__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/dds_fastrtps/track_red_dot__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/reset_tracker__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/follow_msg/action/detail/track_red_dot__rosidl_typesupport_fastrtps_cpp.hpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

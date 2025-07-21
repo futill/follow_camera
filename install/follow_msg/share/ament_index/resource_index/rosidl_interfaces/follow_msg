@@ -1,0 +1,8 @@
+action/GetRedDotPosition.action
+action/GetRedDotPosition.idl
+action/ResetTapeTracker.action
+action/ResetTapeTracker.idl
+action/ResetTracker.action
+action/ResetTracker.idl
+action/TrackRedDot.action
+action/TrackRedDot.idl

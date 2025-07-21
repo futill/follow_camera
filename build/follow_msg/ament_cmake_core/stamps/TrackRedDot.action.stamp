@@ -1,0 +1,8 @@
+# follow_msg/action/TrackRedDot.action
+geometry_msgs/Point[] target_angles  # 路径点列表，x: yaw, y: pitch, z: unused
+bool is_relative                    # true: 相对, false: 绝对
+---
+bool success                        # 动作执行结果
+string message                      # 结果消息
+---
+# 无反馈

@@ -1,0 +1,13 @@
+setup.py
+follow_msg/__init__.py
+follow_msg.egg-info/PKG-INFO
+follow_msg.egg-info/SOURCES.txt
+follow_msg.egg-info/dependency_links.txt
+follow_msg.egg-info/top_level.txt
+follow_msg/action/__init__.py
+follow_msg/action/_get_red_dot_position.py
+follow_msg/action/_reset_tape_tracker.py
+follow_msg/action/_reset_tracker.py
+follow_msg/action/_track_red_dot.py
+follow_msg/srv/__init__.py
+follow_msg/srv/_get_red_dot_position.py

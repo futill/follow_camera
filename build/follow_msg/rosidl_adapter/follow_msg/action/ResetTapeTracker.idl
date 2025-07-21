@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from follow_msg/action/ResetTapeTracker.action
+// generated code does not contain a copyright notice
+
+
+module follow_msg {
+  module action {
+    struct ResetTapeTracker_Goal {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ResetTapeTracker_Result {
+      boolean success;
+
+      string message;
+    };
+    struct ResetTapeTracker_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

@@ -1,0 +1,5 @@
+# follow_msg/action/ResetTracker.action
+---
+bool success
+string message
+---

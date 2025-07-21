@@ -1,0 +1,9 @@
+{
+  "package_name": "follow_msg",
+  "non_idl_tuples": [
+    "/home/orangepi/follow_camera/src/follow_msg:action/TrackRedDot.action",
+    "/home/orangepi/follow_camera/src/follow_msg:action/ResetTapeTracker.action",
+    "/home/orangepi/follow_camera/src/follow_msg:action/ResetTracker.action",
+    "/home/orangepi/follow_camera/src/follow_msg:action/GetRedDotPosition.action"
+  ]
+}

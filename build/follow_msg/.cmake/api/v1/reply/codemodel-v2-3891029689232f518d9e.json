@@ -1,0 +1,233 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-9ebdc899105035961d5b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				},
+				{
+					"build" : "follow_msg__py",
+					"jsonFile" : "directory-follow_msg__py-44a83f525646c391dc1a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/orangepi/follow_camera/build/follow_msg/follow_msg__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "follow_msg",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_follow_msg_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_follow_msg_egg-83781e28d8bc9df0b1c6.json",
+					"name" : "ament_cmake_python_build_follow_msg_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_follow_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_follow_msg-a851df2169537dfc16b3.json",
+					"name" : "ament_cmake_python_copy_follow_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg-f3618ee2ef1c736eaab5.json",
+					"name" : "follow_msg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__cpp-c8bde3c5a47e8088581f.json",
+					"name" : "follow_msg__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "follow_msg__py::@efd8383ca0b2f4f2af20",
+					"jsonFile" : "target-follow_msg__py-e26a638814f4fe76ece8.json",
+					"name" : "follow_msg__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_generator_c-de6510d8f06e2824169d.json",
+					"name" : "follow_msg__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_generator_py-4ce52be7dccb3f0da366.json",
+					"name" : "follow_msg__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_c-90459574a30986e16376.json",
+					"name" : "follow_msg__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_c__pyext-7a631db4ce0c30f63164.json",
+					"name" : "follow_msg__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_cpp-8bde716306ceec46df26.json",
+					"name" : "follow_msg__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_fastrtps_c-7e30e4cd97593edddd0c.json",
+					"name" : "follow_msg__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_fastrtps_c__pyext-e059f05c354ec0355f74.json",
+					"name" : "follow_msg__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_fastrtps_cpp-f54f25975aaf7e19f72c.json",
+					"name" : "follow_msg__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_introspection_c-535804f9a3c7e3b0c433.json",
+					"name" : "follow_msg__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_introspection_c__pyext-142209cecb06fe981cfa.json",
+					"name" : "follow_msg__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg__rosidl_typesupport_introspection_cpp-c0e1487c94201c194d56.json",
+					"name" : "follow_msg__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "follow_msg_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-follow_msg_uninstall-ae11b2b5b3019b045b08.json",
+					"name" : "follow_msg_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1434b10bf8b665bb8877.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/orangepi/follow_camera/build/follow_msg",
+		"source" : "/home/orangepi/follow_camera/src/follow_msg"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

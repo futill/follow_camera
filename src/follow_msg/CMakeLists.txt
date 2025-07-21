@@ -8,11 +8,15 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(action_msgs REQUIRED)
 
 # 生成服务接口
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/GetRedDotPosition.srv"
-  DEPENDENCIES geometry_msgs
+  "action/TrackRedDot.action"
+  "action/ResetTapeTracker.action"
+  "action/ResetTracker.action"
+  "action/GetRedDotPosition.action"
+  DEPENDENCIES geometry_msgs action_msgs
 )
 
 if(BUILD_TESTING)

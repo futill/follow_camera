@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "follow_msg__py",
+		"source" : "/home/orangepi/follow_camera/build/follow_msg/follow_msg__py"
+	}
+}

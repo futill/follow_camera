@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from follow_msg/action/GetRedDotPosition.action
+// generated code does not contain a copyright notice
+
+
+module follow_msg {
+  module action {
+    @verbatim (language="comment", text=
+      "follow_msg/action/ResetTapeTracker.action" "\n"
+      "空目标")
+    struct GetRedDotPosition_Goal {
+      uint8 structure_needs_at_least_one_member;
+    };
+    @verbatim (language="comment", text=
+      "结果")
+    struct GetRedDotPosition_Result {
+      boolean success;
+
+      string message;
+    };
+    @verbatim (language="comment", text=
+      "无反馈")
+    struct GetRedDotPosition_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

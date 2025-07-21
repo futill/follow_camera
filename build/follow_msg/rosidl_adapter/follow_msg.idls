@@ -1,0 +1,4 @@
+/home/orangepi/follow_camera/build/follow_msg/rosidl_adapter/follow_msg:action/TrackRedDot.idl
+/home/orangepi/follow_camera/build/follow_msg/rosidl_adapter/follow_msg:action/ResetTapeTracker.idl
+/home/orangepi/follow_camera/build/follow_msg/rosidl_adapter/follow_msg:action/ResetTracker.idl
+/home/orangepi/follow_camera/build/follow_msg/rosidl_adapter/follow_msg:action/GetRedDotPosition.idl

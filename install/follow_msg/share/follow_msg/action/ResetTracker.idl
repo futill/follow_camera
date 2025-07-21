@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from follow_msg/action/ResetTracker.action
+// generated code does not contain a copyright notice
+
+
+module follow_msg {
+  module action {
+    @verbatim (language="comment", text=
+      "follow_msg/action/ResetTracker.action")
+    struct ResetTracker_Goal {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct ResetTracker_Result {
+      boolean success;
+
+      string message;
+    };
+    struct ResetTracker_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

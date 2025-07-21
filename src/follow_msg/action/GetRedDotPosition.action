@@ -1,0 +1,8 @@
+# follow_msg/action/ResetTapeTracker.action
+# 空目标
+---
+# 结果
+bool success
+string message
+---
+# 无反馈

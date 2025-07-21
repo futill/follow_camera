@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from follow_msg/action/TrackRedDot.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module follow_msg {
+  module action {
+    @verbatim (language="comment", text=
+      "follow_msg/action/TrackRedDot.action")
+    struct TrackRedDot_Goal {
+      @verbatim (language="comment", text=
+        "路径点列表，x: yaw, y: pitch, z: unused")
+      sequence<geometry_msgs::msg::Point> target_angles;
+
+      @verbatim (language="comment", text=
+        "true: 相对, false: 绝对")
+      boolean is_relative;
+    };
+    struct TrackRedDot_Result {
+      @verbatim (language="comment", text=
+        "动作执行结果")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "结果消息")
+      string message;
+    };
+    @verbatim (language="comment", text=
+      "无反馈")
+    struct TrackRedDot_Feedback {
+      uint8 structure_needs_at_least_one_member;
+    };
+  };
+};

@@ -1,0 +1,24 @@
+[1.090s] Invoking command in '/home/orangepi/follow_camera/src/follow_ros': PYTHONPATH=/home/orangepi/follow_camera/build/follow_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/follow_ros build --build-base /home/orangepi/follow_camera/build/follow_ros/build install --record /home/orangepi/follow_camera/build/follow_ros/install.log --single-version-externally-managed install_data
+[1.443s] running egg_info
+[1.444s] writing ../../build/follow_ros/follow_ros.egg-info/PKG-INFO
+[1.445s] writing dependency_links to ../../build/follow_ros/follow_ros.egg-info/dependency_links.txt
+[1.445s] writing entry points to ../../build/follow_ros/follow_ros.egg-info/entry_points.txt
+[1.446s] writing requirements to ../../build/follow_ros/follow_ros.egg-info/requires.txt
+[1.446s] writing top-level names to ../../build/follow_ros/follow_ros.egg-info/top_level.txt
+[1.447s] reading manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'
+[1.448s] writing manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'
+[1.449s] running build
+[1.449s] running build_py
+[1.450s] running install
+[1.450s] running install_lib
+[1.452s] running install_data
+[1.452s] running install_egg_info
+[1.454s] removing '/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info' (and everything under it)
+[1.455s] Copying ../../build/follow_ros/follow_ros.egg-info to /home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info
+[1.456s] running install_scripts
+[1.489s] Installing camer_node script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.490s] Installing gimbal_controller script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.491s] Installing red_dot_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.491s] Installing tape_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.491s] writing list of installed files to '/home/orangepi/follow_camera/build/follow_ros/install.log'
+[1.594s] Invoked command in '/home/orangepi/follow_camera/src/follow_ros' returned '0': PYTHONPATH=/home/orangepi/follow_camera/build/follow_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/follow_ros build --build-base /home/orangepi/follow_camera/build/follow_ros/build install --record /home/orangepi/follow_camera/build/follow_ros/install.log --single-version-externally-managed install_data

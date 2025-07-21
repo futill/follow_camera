@@ -1,0 +1,400 @@
+[0.000000] (-) TimerEvent: {}
+[0.000618] (follow_msg) JobQueued: {'identifier': 'follow_msg', 'dependencies': OrderedDict()}
+[0.000884] (follow_ros) JobQueued: {'identifier': 'follow_ros', 'dependencies': OrderedDict([('follow_msg', '/home/orangepi/follow_camera/install/follow_msg')])}
+[0.001073] (follow_msg) JobStarted: {'identifier': 'follow_msg'}
+[0.013116] (follow_msg) JobProgress: {'identifier': 'follow_msg', 'progress': 'cmake'}
+[0.014000] (follow_msg) JobProgress: {'identifier': 'follow_msg', 'progress': 'build'}
+[0.015242] (follow_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/orangepi/follow_camera/build/follow_msg', '--', '-j8', '-l8'], 'cwd': '/home/orangepi/follow_camera/build/follow_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.210.47 56892 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/home/orangepi/follow_camera/install/follow_msg/lib:/usr/local/lib:/usr/local/lib:/home/orangepi/uvg_car/install/oakchina_vio_package/lib:/home/orangepi/uvg_car/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('NVM_BIN', '/home/orangepi/.nvm/versions/node/v22.17.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-bb64ba19-6648-4a95-807e-4e754d31c7d2.sock'), ('NVM_INC', '/home/orangepi/.nvm/versions/node/v22.17.0/include/node'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/orangepi/.nvm'), ('COLCON_PREFIX_PATH', '/home/orangepi/follow_camera/install:/home/orangepi/car_ros2/install:/home/orangepi/uvg_car/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '84'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/home/orangepi/.local/bin:/home/orangepi/.nvm/versions/node/v22.17.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/orangepi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-eafc9373665f109e.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-5b4ef8cecc.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/follow_camera/build/follow_msg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.210.47 56892 192.168.210.160 22'), ('NVM_CD_FLAGS', ''), ('PYTHONPATH', '/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages:/home/orangepi/uvg_car/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/orangepi/car_ros2/install/rknn_yolo/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[0.083635] (follow_msg) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.098548] (-) TimerEvent: {}
+[0.199238] (-) TimerEvent: {}
+[0.299900] (-) TimerEvent: {}
+[0.353159] (follow_msg) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.362591] (follow_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.374825] (follow_msg) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.400020] (-) TimerEvent: {}
+[0.424879] (follow_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.456342] (follow_msg) StdoutLine: {'line': b'-- Found geometry_msgs: 4.8.0 (/opt/ros/humble/share/geometry_msgs/cmake)\n'}
+[0.500157] (-) TimerEvent: {}
+[0.506956] (follow_msg) StdoutLine: {'line': b'-- Found action_msgs: 1.2.1 (/opt/ros/humble/share/action_msgs/cmake)\n'}
+[0.600242] (-) TimerEvent: {}
+[0.700723] (-) TimerEvent: {}
+[0.801424] (-) TimerEvent: {}
+[0.902325] (-) TimerEvent: {}
+[1.002967] (-) TimerEvent: {}
+[1.103293] (-) TimerEvent: {}
+[1.147796] (follow_msg) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.203385] (-) TimerEvent: {}
+[1.303854] (-) TimerEvent: {}
+[1.404375] (-) TimerEvent: {}
+[1.504803] (-) TimerEvent: {}
+[1.605441] (-) TimerEvent: {}
+[1.623697] (follow_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.705543] (-) TimerEvent: {}
+[1.806060] (-) TimerEvent: {}
+[1.906761] (-) TimerEvent: {}
+[2.007182] (-) TimerEvent: {}
+[2.107905] (-) TimerEvent: {}
+[2.208238] (-) TimerEvent: {}
+[2.263244] (follow_msg) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.308332] (-) TimerEvent: {}
+[2.324561] (follow_msg) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.375221] (follow_msg) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.375548] (follow_msg) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.375652] (follow_msg) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.10.so\n'}
+[2.408595] (-) TimerEvent: {}
+[2.449799] (follow_msg) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.455812] (follow_msg) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.506438] (follow_msg) StdoutLine: {'line': b'-- Generating done\n'}
+[2.508680] (-) TimerEvent: {}
+[2.524873] (follow_msg) StdoutLine: {'line': b'-- Build files have been written to: /home/orangepi/follow_camera/build/follow_msg\n'}
+[2.608792] (-) TimerEvent: {}
+[2.621936] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_generator_c\x1b[0m\n'}
+[2.632260] (follow_msg) StdoutLine: {'line': b'[  0%] Built target ament_cmake_python_copy_follow_msg\n'}
+[2.644049] (follow_msg) StdoutLine: {'line': b'[  1%] Built target follow_msg__cpp\n'}
+[2.653284] (follow_msg) StdoutLine: {'line': b'[  3%] \x1b[32mBuilding C object CMakeFiles/follow_msg__rosidl_generator_c.dir/rosidl_generator_c/follow_msg/srv/detail/get_red_dot_position__functions.c.o\x1b[0m\n'}
+[2.680944] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.682413] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.705517] (follow_msg) StdoutLine: {'line': b'[  5%] \x1b[32mBuilding CXX object CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/follow_msg/srv/detail/dds_fastrtps/get_red_dot_position__type_support.cpp.o\x1b[0m\n'}
+[2.708997] (-) TimerEvent: {}
+[2.715231] (follow_msg) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding CXX object CMakeFiles/follow_msg__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/follow_msg/srv/get_red_dot_position__type_support.cpp.o\x1b[0m\n'}
+[2.715904] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.768601] (follow_msg) StdoutLine: {'line': b'[  9%] \x1b[32m\x1b[1mLinking C shared library libfollow_msg__rosidl_generator_c.so\x1b[0m\n'}
+[2.773128] (follow_msg) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/follow_msg__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/follow_msg/srv/detail/get_red_dot_position__type_support.cpp.o\x1b[0m\n'}
+[2.809149] (-) TimerEvent: {}
+[2.909795] (-) TimerEvent: {}
+[2.918323] (follow_msg) StdoutLine: {'line': b'[ 18%] Built target follow_msg__rosidl_generator_c\n'}
+[2.980334] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_c\x1b[0m\n'}
+[2.992426] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[3.009535] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[3.010137] (-) TimerEvent: {}
+[3.016115] (follow_msg) StdoutLine: {'line': b'running egg_info\n'}
+[3.017566] (follow_msg) StdoutLine: {'line': b'writing follow_msg.egg-info/PKG-INFO\n'}
+[3.018244] (follow_msg) StdoutLine: {'line': b'writing dependency_links to follow_msg.egg-info/dependency_links.txt\n'}
+[3.018766] (follow_msg) StdoutLine: {'line': b'writing top-level names to follow_msg.egg-info/top_level.txt\n'}
+[3.023253] (follow_msg) StdoutLine: {'line': b"reading manifest file 'follow_msg.egg-info/SOURCES.txt'\n"}
+[3.024296] (follow_msg) StdoutLine: {'line': b"writing manifest file 'follow_msg.egg-info/SOURCES.txt'\n"}
+[3.033089] (follow_msg) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/follow_msg__rosidl_typesupport_c.dir/rosidl_typesupport_c/follow_msg/srv/get_red_dot_position__type_support.cpp.o\x1b[0m\n'}
+[3.058104] (follow_msg) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding C object CMakeFiles/follow_msg__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/follow_msg/srv/detail/get_red_dot_position__type_support.c.o\x1b[0m\n'}
+[3.064904] (follow_msg) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/follow_msg__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/follow_msg/srv/detail/get_red_dot_position__type_support_c.cpp.o\x1b[0m\n'}
+[3.093682] (follow_msg) StdoutLine: {'line': b'[ 23%] Built target ament_cmake_python_build_follow_msg_egg\n'}
+[3.094413] (follow_msg) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX shared library libfollow_msg__rosidl_typesupport_c.so\x1b[0m\n'}
+[3.110246] (-) TimerEvent: {}
+[3.123032] (follow_msg) StdoutLine: {'line': b'[ 27%] \x1b[32m\x1b[1mLinking CXX shared library libfollow_msg__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[3.170600] (follow_msg) StdoutLine: {'line': b'[ 29%] \x1b[32m\x1b[1mLinking C shared library libfollow_msg__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[3.210358] (-) TimerEvent: {}
+[3.225321] (follow_msg) StdoutLine: {'line': b'[ 36%] Built target follow_msg__rosidl_typesupport_c\n'}
+[3.227947] (follow_msg) StdoutLine: {'line': b'[ 43%] Built target follow_msg__rosidl_typesupport_cpp\n'}
+[3.284369] (follow_msg) StdoutLine: {'line': b'[ 50%] Built target follow_msg__rosidl_typesupport_introspection_c\n'}
+[3.310633] (-) TimerEvent: {}
+[3.381235] (follow_msg) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libfollow_msg__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[3.410718] (-) TimerEvent: {}
+[3.455592] (follow_msg) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libfollow_msg__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[3.510827] (-) TimerEvent: {}
+[3.536503] (follow_msg) StdoutLine: {'line': b'[ 61%] Built target follow_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[3.573306] (follow_msg) StdoutLine: {'line': b'[ 63%] \x1b[32m\x1b[1mLinking CXX shared library libfollow_msg__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[3.608197] (follow_msg) StdoutLine: {'line': b'[ 70%] Built target follow_msg__rosidl_typesupport_introspection_cpp\n'}
+[3.610942] (-) TimerEvent: {}
+[3.698651] (follow_msg) StdoutLine: {'line': b'[ 78%] Built target follow_msg__rosidl_typesupport_fastrtps_c\n'}
+[3.711167] (-) TimerEvent: {}
+[3.729313] (follow_msg) StdoutLine: {'line': b'[ 78%] Built target follow_msg\n'}
+[3.797600] (follow_msg) StdoutLine: {'line': b'[ 80%] Built target follow_msg__py\n'}
+[3.811284] (-) TimerEvent: {}
+[3.817379] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_generator_py\x1b[0m\n'}
+[3.855484] (follow_msg) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/follow_msg__rosidl_generator_py.dir/rosidl_generator_py/follow_msg/srv/_get_red_dot_position_s.c.o\x1b[0m\n'}
+[3.911380] (-) TimerEvent: {}
+[4.009382] (follow_msg) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/follow_msg/libfollow_msg__rosidl_generator_py.so\x1b[0m\n'}
+[4.011536] (-) TimerEvent: {}
+[4.112034] (-) TimerEvent: {}
+[4.116470] (follow_msg) StdoutLine: {'line': b'[ 89%] Built target follow_msg__rosidl_generator_py\n'}
+[4.137519] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[4.148445] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[4.148757] (follow_msg) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target follow_msg__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[4.161374] (follow_msg) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[4.183561] (follow_msg) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[4.184094] (follow_msg) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\x1b[0m\n'}
+[4.212172] (-) TimerEvent: {}
+[4.257907] (follow_msg) StdoutLine: {'line': b'[ 96%] Built target follow_msg__rosidl_typesupport_c__pyext\n'}
+[4.290132] (follow_msg) StdoutLine: {'line': b'[ 98%] Built target follow_msg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[4.296538] (follow_msg) StdoutLine: {'line': b'[100%] Built target follow_msg__rosidl_typesupport_introspection_c__pyext\n'}
+[4.312507] (follow_msg) CommandEnded: {'returncode': 0}
+[4.315083] (-) TimerEvent: {}
+[4.315451] (follow_msg) JobProgress: {'identifier': 'follow_msg', 'progress': 'install'}
+[4.341403] (follow_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/orangepi/follow_camera/build/follow_msg'], 'cwd': '/home/orangepi/follow_camera/build/follow_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('UMS_MOUNTPOINT', '/mnt/ums'), ('GST_V4L2_PREFERRED_FOURCC', 'NV12:YU12:NV16:YUY2'), ('LANGUAGE', 'en_US.UTF-8'), ('USER', 'orangepi'), ('SSH_CLIENT', '192.168.210.47 56892 22'), ('XDG_SESSION_TYPE', 'tty'), ('GIT_ASKPASS', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('USB_FUNCS', 'adb'), ('LD_LIBRARY_PATH', '/home/orangepi/follow_camera/install/follow_msg/lib:/usr/local/lib:/usr/local/lib:/home/orangepi/uvg_car/install/oakchina_vio_package/lib:/home/orangepi/uvg_car/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/orangepi'), ('TERM_PROGRAM_VERSION', '1.102.1'), ('NVM_BIN', '/home/orangepi/.nvm/versions/node/v22.17.0/bin'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-bb64ba19-6648-4a95-807e-4e754d31c7d2.sock'), ('NVM_INC', '/home/orangepi/.nvm/versions/node/v22.17.0/include/node'), ('GST_INSPECT_NO_COLORS', '1'), ('GST_MPP_NO_RGA', '1'), ('ROS_PYTHON_VERSION', '3'), ('COGL_DRIVER', 'gles2'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node'), ('SSL_CERT_FILE', '/usr/lib/ssl/certs/ca-certificates.crt'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('NVM_DIR', '/home/orangepi/.nvm'), ('COLCON_PREFIX_PATH', '/home/orangepi/follow_camera/install:/home/orangepi/car_ros2/install:/home/orangepi/uvg_car/install'), ('GST_V4L2SRC_MAX_RESOLUTION', '3840x2160'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'orangepi'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm-256color'), ('GST_GL_API', 'gles2'), ('XDG_SESSION_ID', '84'), ('GST_VIDEO_CONVERT_PREFERRED_FORMAT', 'NV12:NV16:I420:YUY2'), ('GST_V4L2SRC_RK_DEVICES', '_mainpath:_selfpath:_bypass:_scale'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/home/orangepi/.local/bin:/home/orangepi/.nvm/versions/node/v22.17.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/orangepi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GST_GL_PLATFORM', 'egl'), ('GST_DEBUG_NO_COLOR', '1'), ('SSL_CERT_DIR', '/usr/lib/ssl/certs'), ('GST_V4L2SRC_DEFAULT_DEVICE', '/dev/video-camera0'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-eafc9373665f109e.txt'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-5b4ef8cecc.sock'), ('TERM_PROGRAM', 'vscode'), ('GST_V4L2_USE_LIBV4L2', '1'), ('UMS_SIZE', '256M'), ('AMENT_PREFIX_PATH', '/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble'), ('LC_MESSAGES', 'en_US.UTF-8'), ('SHELL', '/bin/bash'), ('UMS_RO', '0'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('UMS_FSTYPE', 'vfat'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/orangepi/follow_camera/build/follow_msg'), ('LC_ALL', 'en_US.UTF-8'), ('SSH_CONNECTION', '192.168.210.47 56892 192.168.210.160 22'), ('NVM_CD_FLAGS', ''), ('PYTHONPATH', '/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages:/home/orangepi/uvg_car/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/orangepi/car_ros2/install/rknn_yolo/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('UMS_MOUNT', '0'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble'), ('UMS_FILE', '/userdata/ums_shared.img')]), 'shell': False}
+[4.363959] (follow_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.365410] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/rosidl_interfaces/follow_msg\n'}
+[4.365936] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.366493] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.367195] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/track_red_dot.h\n'}
+[4.367987] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.368442] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__functions.c\n'}
+[4.369136] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__functions.c\n'}
+[4.370342] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__functions.c\n'}
+[4.370800] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__functions.h\n'}
+[4.371437] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__struct.h\n'}
+[4.371983] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__functions.h\n'}
+[4.372355] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__struct.h\n'}
+[4.372813] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__functions.c\n'}
+[4.373388] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.h\n'}
+[4.374133] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__struct.h\n'}
+[4.374670] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__functions.h\n'}
+[4.375143] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__struct.h\n'}
+[4.375632] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__functions.h\n'}
+[4.375982] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.h\n'}
+[4.376330] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.h\n'}
+[4.376674] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.h\n'}
+[4.377020] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tape_tracker.h\n'}
+[4.377363] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/get_red_dot_position.h\n'}
+[4.377707] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tracker.h\n'}
+[4.378048] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg\n'}
+[4.378393] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.378750] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.379098] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.379438] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__functions.c\n'}
+[4.379778] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__struct.h\n'}
+[4.380119] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__functions.h\n'}
+[4.380460] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__type_support.h\n'}
+[4.380821] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/get_red_dot_position.h\n'}
+[4.381161] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/library_path.sh\n'}
+[4.381505] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/library_path.dsv\n'}
+[4.381844] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_c.so\n'}
+[4.382199] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_c.so" to ""\n'}
+[4.382561] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.382904] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.383243] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.383583] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_fastrtps_c.h\n'}
+[4.383924] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_fastrtps_c.h\n'}
+[4.384268] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_fastrtps_c.h\n'}
+[4.384609] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_fastrtps_c.h\n'}
+[4.384949] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg\n'}
+[4.385290] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.385658] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.386035] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.386376] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__rosidl_typesupport_fastrtps_c.h\n'}
+[4.386716] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[4.387061] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[4.387402] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.387742] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.388081] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.388424] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.c\n'}
+[4.388777] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_introspection_c.h\n'}
+[4.389131] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_introspection_c.h\n'}
+[4.389473] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_introspection_c.h\n'}
+[4.389819] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.c\n'}
+[4.390160] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_introspection_c.h\n'}
+[4.390517] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.c\n'}
+[4.390857] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.c\n'}
+[4.391214] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg\n'}
+[4.391553] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.391897] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.392262] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.392605] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__type_support.c\n'}
+[4.392946] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__rosidl_typesupport_introspection_c.h\n'}
+[4.393287] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_c.so\n'}
+[4.393629] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_c.so" to ""\n'}
+[4.393971] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_c.so\n'}
+[4.394312] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_c.so" to ""\n'}
+[4.394661] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.395003] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.395344] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/get_red_dot_position.hpp\n'}
+[4.395706] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tape_tracker.hpp\n'}
+[4.396048] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.396389] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.hpp\n'}
+[4.396732] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__struct.hpp\n'}
+[4.397112] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__traits.hpp\n'}
+[4.397451] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__struct.hpp\n'}
+[4.397792] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__traits.hpp\n'}
+[4.398135] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__builder.hpp\n'}
+[4.398488] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.hpp\n'}
+[4.398852] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__builder.hpp\n'}
+[4.399200] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.hpp\n'}
+[4.399542] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__traits.hpp\n'}
+[4.399885] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__struct.hpp\n'}
+[4.400226] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__traits.hpp\n'}
+[4.400566] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__struct.hpp\n'}
+[4.400904] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.hpp\n'}
+[4.401244] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__builder.hpp\n'}
+[4.401617] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__builder.hpp\n'}
+[4.401960] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/track_red_dot.hpp\n'}
+[4.402322] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tracker.hpp\n'}
+[4.402665] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg\n'}
+[4.403008] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.403351] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.403692] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/get_red_dot_position.hpp\n'}
+[4.404036] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.404377] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__traits.hpp\n'}
+[4.404724] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__builder.hpp\n'}
+[4.405064] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__struct.hpp\n'}
+[4.405417] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__type_support.hpp\n'}
+[4.405770] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.406137] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.406481] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.406825] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.407170] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.407513] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.407856] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/dds_fastrtps\n'}
+[4.408234] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.408580] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg\n'}
+[4.408947] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.409298] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.409641] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.409984] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.410329] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/dds_fastrtps\n'}
+[4.410672] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.411017] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[4.411361] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg\n'}
+[4.411702] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action\n'}
+[4.412064] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail\n'}
+[4.412440] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.cpp\n'}
+[4.412784] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.413129] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.cpp\n'}
+[4.413473] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.413816] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.414183] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.cpp\n'}
+[4.414525] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.cpp\n'}
+[4.414869] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.415197] (-) TimerEvent: {}
+[4.415515] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv\n'}
+[4.415639] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail\n'}
+[4.415718] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.415790] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/srv/detail/get_red_dot_position__type_support.cpp\n'}
+[4.415860] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[4.415928] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[4.415993] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_cpp.so\n'}
+[4.416058] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_cpp.so" to ""\n'}
+[4.416124] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/pythonpath.sh\n'}
+[4.416189] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/pythonpath.dsv\n'}
+[4.416254] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info\n'}
+[4.416337] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[4.416404] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[4.416471] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[4.416537] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[4.416602] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg\n'}
+[4.416668] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action\n'}
+[4.416733] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tracker_s.c\n'}
+[4.416797] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_get_red_dot_position_s.c\n'}
+[4.416869] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tape_tracker_s.c\n'}
+[4.416939] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tracker.py\n'}
+[4.417006] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tape_tracker.py\n'}
+[4.417071] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_track_red_dot.py\n'}
+[4.417136] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/__init__.py\n'}
+[4.417201] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_track_red_dot_s.c\n'}
+[4.417265] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_get_red_dot_position.py\n'}
+[4.417330] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_c.c\n'}
+[4.417396] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.417461] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/__init__.py\n'}
+[4.417526] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[4.417591] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/libfollow_msg__rosidl_generator_py.so\n'}
+[4.417659] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.417726] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[4.417791] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.417857] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv\n'}
+[4.417924] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv/_get_red_dot_position_s.c\n'}
+[4.417989] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv/__init__.py\n'}
+[4.418054] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv/_get_red_dot_position.py\n'}
+[4.434332] (follow_msg) StdoutLine: {'line': b"Listing '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg'...\n"}
+[4.434860] (follow_msg) StdoutLine: {'line': b"Compiling '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/__init__.py'...\n"}
+[4.435340] (follow_msg) StdoutLine: {'line': b"Listing '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action'...\n"}
+[4.435595] (follow_msg) StdoutLine: {'line': b"Listing '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv'...\n"}
+[4.435686] (follow_msg) StdoutLine: {'line': b"Compiling '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv/__init__.py'...\n"}
+[4.435756] (follow_msg) StdoutLine: {'line': b"Compiling '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/srv/_get_red_dot_position.py'...\n"}
+[4.443499] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.443887] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.444149] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.444566] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.444722] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so\n'}
+[4.445115] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so" to ""\n'}
+[4.445279] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_py.so\n'}
+[4.445819] (follow_msg) StdoutLine: {'line': b'-- Set runtime path of "/home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_py.so" to ""\n'}
+[4.445907] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/TrackRedDot.idl\n'}
+[4.445983] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTapeTracker.idl\n'}
+[4.446056] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTracker.idl\n'}
+[4.446205] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/srv/GetRedDotPosition.idl\n'}
+[4.446284] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/TrackRedDot.action\n'}
+[4.446506] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTapeTracker.action\n'}
+[4.446586] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTracker.action\n'}
+[4.446660] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/srv/GetRedDotPosition.srv\n'}
+[4.446731] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/srv/GetRedDotPosition_Request.msg\n'}
+[4.446803] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/srv/GetRedDotPosition_Response.msg\n'}
+[4.446875] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/package_run_dependencies/follow_msg\n'}
+[4.447029] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/parent_prefix_path/follow_msg\n'}
+[4.447107] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/ament_prefix_path.sh\n'}
+[4.447179] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/ament_prefix_path.dsv\n'}
+[4.447251] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/path.sh\n'}
+[4.447323] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/path.dsv\n'}
+[4.447506] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.bash\n'}
+[4.447585] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.sh\n'}
+[4.447658] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.zsh\n'}
+[4.447729] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.dsv\n'}
+[4.447802] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/package.dsv\n'}
+[4.448016] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/packages/follow_msg\n'}
+[4.448091] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cExport.cmake\n'}
+[4.448165] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.448239] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[4.448312] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[4.448510] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.448589] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.448664] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cExport.cmake\n'}
+[4.448744] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.448816] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cppExport.cmake\n'}
+[4.448888] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[4.448960] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[4.449034] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.449261] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.449335] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cppExport.cmake\n'}
+[4.449408] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.449480] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_pyExport.cmake\n'}
+[4.449551] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[4.449622] (follow_msg) StdoutLine: {'line': b'-- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[4.449694] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.449764] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.449835] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.449906] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.449977] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.450151] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.450227] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msgConfig.cmake\n'}
+[4.450294] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msgConfig-version.cmake\n'}
+[4.450360] (follow_msg) StdoutLine: {'line': b'-- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/package.xml\n'}
+[4.451380] (follow_msg) CommandEnded: {'returncode': 0}
+[4.475160] (follow_msg) JobEnded: {'identifier': 'follow_msg', 'rc': 0}
+[4.476332] (follow_ros) JobStarted: {'identifier': 'follow_ros'}
+[4.515341] (-) TimerEvent: {}
+[4.615999] (-) TimerEvent: {}
+[4.716650] (-) TimerEvent: {}
+[4.817188] (-) TimerEvent: {}
+[4.917952] (-) TimerEvent: {}
+[5.018654] (-) TimerEvent: {}
+[5.119358] (-) TimerEvent: {}
+[5.220065] (-) TimerEvent: {}
+[5.320907] (-) TimerEvent: {}
+[5.358067] (follow_ros) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/follow_ros', 'build', '--build-base', '/home/orangepi/follow_camera/build/follow_ros/build', 'install', '--record', '/home/orangepi/follow_camera/build/follow_ros/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/orangepi/follow_camera/src/follow_ros', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'UMS_MOUNTPOINT': '/mnt/ums', 'GST_V4L2_PREFERRED_FOURCC': 'NV12:YU12:NV16:YUY2', 'LANGUAGE': 'en_US.UTF-8', 'USER': 'orangepi', 'SSH_CLIENT': '192.168.210.47 56892 22', 'XDG_SESSION_TYPE': 'tty', 'GIT_ASKPASS': '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'USB_FUNCS': 'adb', 'LD_LIBRARY_PATH': '/home/orangepi/follow_camera/install/follow_msg/lib:/usr/local/lib:/usr/local/lib:/home/orangepi/uvg_car/install/oakchina_vio_package/lib:/home/orangepi/uvg_car/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'BROWSER': '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/helpers/browser.sh', 'MOTD_SHOWN': 'pam', 'HOME': '/home/orangepi', 'TERM_PROGRAM_VERSION': '1.102.1', 'NVM_BIN': '/home/orangepi/.nvm/versions/node/v22.17.0/bin', 'VSCODE_IPC_HOOK_CLI': '/run/user/1000/vscode-ipc-bb64ba19-6648-4a95-807e-4e754d31c7d2.sock', 'NVM_INC': '/home/orangepi/.nvm/versions/node/v22.17.0/include/node', 'GST_INSPECT_NO_COLORS': '1', 'GST_MPP_NO_RGA': '1', 'ROS_PYTHON_VERSION': '3', 'COGL_DRIVER': 'gles2', 'VSCODE_GIT_ASKPASS_MAIN': '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/node', 'SSL_CERT_FILE': '/usr/lib/ssl/certs/ca-certificates.crt', 'PYDEVD_DISABLE_FILE_VALIDATION': '1', 'BUNDLED_DEBUGPY_PATH': '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/libs/debugpy', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'NVM_DIR': '/home/orangepi/.nvm', 'COLCON_PREFIX_PATH': '/home/orangepi/follow_camera/install:/home/orangepi/car_ros2/install:/home/orangepi/uvg_car/install', 'GST_V4L2SRC_MAX_RESOLUTION': '3840x2160', 'ROS_DISTRO': 'humble', 'LOGNAME': 'orangepi', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'TERM': 'xterm-256color', 'GST_GL_API': 'gles2', 'XDG_SESSION_ID': '84', 'GST_VIDEO_CONVERT_PREFERRED_FORMAT': 'NV12:NV16:I420:YUY2', 'GST_V4L2SRC_RK_DEVICES': '_mainpath:_selfpath:_bypass:_scale', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/home/orangepi/.vscode-server/cli/servers/Stable-7adae6a56e34cb64d08899664b814cf620465925/server/bin/remote-cli:/home/orangepi/.local/bin:/home/orangepi/.nvm/versions/node/v22.17.0/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/orangepi/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/bundled/scripts/noConfigScripts', 'XDG_RUNTIME_DIR': '/run/user/1000', 'GST_GL_PLATFORM': 'egl', 'GST_DEBUG_NO_COLOR': '1', 'SSL_CERT_DIR': '/usr/lib/ssl/certs', 'GST_V4L2SRC_DEFAULT_DEVICE': '/dev/video-camera0', 'DISPLAY': ':0', 'VSCODE_DEBUGPY_ADAPTER_ENDPOINTS': '/home/orangepi/.vscode-server/extensions/ms-python.debugpy-2025.10.0-linux-arm64/.noConfigDebugAdapterEndpoints/endpoint-eafc9373665f109e.txt', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1000/vscode-git-5b4ef8cecc.sock', 'TERM_PROGRAM': 'vscode', 'GST_V4L2_USE_LIBV4L2': '1', 'UMS_SIZE': '256M', 'AMENT_PREFIX_PATH': '/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble', 'LC_MESSAGES': 'en_US.UTF-8', 'SHELL': '/bin/bash', 'UMS_RO': '0', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'UMS_FSTYPE': 'vfat', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/orangepi/follow_camera/build/follow_ros', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.210.47 56892 192.168.210.160 22', 'NVM_CD_FLAGS': '', 'PYTHONPATH': '/home/orangepi/follow_camera/build/follow_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages:/home/orangepi/uvg_car/install/lslidar_msgs/local/lib/python3.10/dist-packages:/home/orangepi/car_ros2/install/rknn_yolo/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'UMS_MOUNT': '0', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/orangepi/follow_camera/install/follow_msg:/home/orangepi/uvg_car/install/oakchina_vio_package:/home/orangepi/uvg_car/install/lslidar_driver:/home/orangepi/uvg_car/install/lslidar_msgs:/home/orangepi/uvg_car/install/fishbot_navigation2:/home/orangepi/uvg_car/install/fishbot_cartographer', 'UMS_FILE': '/userdata/ums_shared.img'}, 'shell': False}
+[5.420980] (-) TimerEvent: {}
+[5.521295] (-) TimerEvent: {}
+[5.621601] (-) TimerEvent: {}
+[5.665792] (follow_ros) StdoutLine: {'line': b'running egg_info\n'}
+[5.666661] (follow_ros) StdoutLine: {'line': b'writing ../../build/follow_ros/follow_ros.egg-info/PKG-INFO\n'}
+[5.666980] (follow_ros) StdoutLine: {'line': b'writing dependency_links to ../../build/follow_ros/follow_ros.egg-info/dependency_links.txt\n'}
+[5.667208] (follow_ros) StdoutLine: {'line': b'writing entry points to ../../build/follow_ros/follow_ros.egg-info/entry_points.txt\n'}
+[5.667286] (follow_ros) StdoutLine: {'line': b'writing requirements to ../../build/follow_ros/follow_ros.egg-info/requires.txt\n'}
+[5.667431] (follow_ros) StdoutLine: {'line': b'writing top-level names to ../../build/follow_ros/follow_ros.egg-info/top_level.txt\n'}
+[5.669864] (follow_ros) StdoutLine: {'line': b"reading manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'\n"}
+[5.670881] (follow_ros) StdoutLine: {'line': b"writing manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'\n"}
+[5.670955] (follow_ros) StdoutLine: {'line': b'running build\n'}
+[5.671023] (follow_ros) StdoutLine: {'line': b'running build_py\n'}
+[5.671447] (follow_ros) StdoutLine: {'line': b'running install\n'}
+[5.671719] (follow_ros) StdoutLine: {'line': b'running install_lib\n'}
+[5.673553] (follow_ros) StdoutLine: {'line': b'running install_data\n'}
+[5.673738] (follow_ros) StdoutLine: {'line': b'running install_egg_info\n'}
+[5.676066] (follow_ros) StdoutLine: {'line': b"removing '/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[5.676366] (follow_ros) StdoutLine: {'line': b'Copying ../../build/follow_ros/follow_ros.egg-info to /home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info\n'}
+[5.677091] (follow_ros) StdoutLine: {'line': b'running install_scripts\n'}
+[5.704374] (follow_ros) StdoutLine: {'line': b'Installing camer_node script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros\n'}
+[5.704948] (follow_ros) StdoutLine: {'line': b'Installing gimbal_controller script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros\n'}
+[5.705322] (follow_ros) StdoutLine: {'line': b'Installing red_dot_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros\n'}
+[5.705696] (follow_ros) StdoutLine: {'line': b'Installing reset_controller script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros\n'}
+[5.706044] (follow_ros) StdoutLine: {'line': b'Installing tape_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros\n'}
+[5.706389] (follow_ros) StdoutLine: {'line': b"writing list of installed files to '/home/orangepi/follow_camera/build/follow_ros/install.log'\n"}
+[5.721781] (-) TimerEvent: {}
+[5.756427] (follow_ros) CommandEnded: {'returncode': 0}
+[5.777797] (follow_ros) JobEnded: {'identifier': 'follow_ros', 'rc': 0}
+[5.779307] (-) EventReactorShutdown: {}
