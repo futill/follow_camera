@@ -23,7 +23,7 @@ class follow_node(Node):
             return
         
         # 设置回调频率为 60 Hz
-        self.timer = self.create_timer(1/60, self.timer_callback)
+        self.timer = self.create_timer(1/30, self.timer_callback)
 
     def timer_callback(self):
         ret, frame = self.cap.read()

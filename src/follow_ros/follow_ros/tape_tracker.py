@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
-from follow_msg.msg import GimbalCommand
+from geometry_msgs.msg import Twist
 from std_srvs.srv import Empty
 from cv_bridge import CvBridge
 import cv2
@@ -12,6 +12,29 @@ import threading
 import queue
 
 class RectangleDetector(Node):
+    class PIDController:
+        def __init__(self, target_speed):
+            self.target_speed = target_speed  # Fixed speed factor (degrees/second)
+            self.max_output = 5.0  # Maximum angular velocity (degrees/second)
+
+        def compute(self, direction_vector):
+            """
+            Compute angular velocity based on normalized direction vector and fixed speed.
+            direction_vector: [dx, dy] in pixels
+            Returns: [yaw_rate, pitch_rate] in degrees/second
+            """
+            # Normalize the direction vector
+            norm = np.linalg.norm(direction_vector)
+            if norm < 1e-6:  # Avoid division by zero
+                return 0.0, 0.0
+            
+            normalized_vector = direction_vector / norm
+            # Scale by target speed and clamp to max output
+            output = normalized_vector * self.target_speed
+            yaw_rate = max(min(output[0], self.max_output), -self.max_output)
+            pitch_rate = max(min(output[1], self.max_output), -self.max_output)
+            return yaw_rate, pitch_rate
+
     def __init__(self):
         super().__init__('rectangle_detector')
         self.subscription = self.create_subscription(
@@ -19,7 +42,7 @@ class RectangleDetector(Node):
             '/color',
             self.image_callback,
             100)
-        self.publisher = self.create_publisher(GimbalCommand, 'cmd_vel', 10)
+        self.publisher = self.create_publisher(Twist, 'cmd_vel', 10)
         self.reset_server = self.create_service(
             Empty,
             '/reset_tape_tracker',
@@ -48,12 +71,16 @@ class RectangleDetector(Node):
         self.filtered_laser_point = None
         self.laser_alpha = 0.1
         self.detection_failure_count = 0
-        self.max_failure_count = 5
+        self.max_failure_count = 6
+
+        # PID控制器，使用固定速度因子
+        self.pid_controller = self.PIDController(target_speed=3.0)  # 目标速度 5 度/秒，可根据需要调整
+        self.last_time = time.time()
 
         # 物理参数
-        self.vertex_threshold = 6  # 像素单位的到达阈值
+        self.vertex_threshold = 10  # 像素单位的到达阈值
         self.min_path_points = 5
-        self.max_path_points = 30
+        self.max_path_points = 10
         self.current_path_points = []
         self.current_path_index = 0
         self.middle_corners = []
@@ -69,11 +96,6 @@ class RectangleDetector(Node):
         self.wait_start_time = 0.0
         self.moving_to_target = False
         self.last_target_point = None
-
-        # 固定角度步长参数（单位：度）
-        self.yaw_step = 0.2 # 每次偏航步长
-        self.pitch_step = 0.2  # 每次俯仰步长
-        self.angular_tolerance_pixels = 3.0  # 像素误差容忍度（像素）
 
         # 图像处理线程相关
         self.image_queue = queue.Queue(maxsize=1)
@@ -101,18 +123,31 @@ class RectangleDetector(Node):
 
     def init_kalman_laser(self):
         kalman = cv2.KalmanFilter(4, 2)
-        kalman.measurementMatrix = np.array([[1, 0, 0, 0],
-                                            [0, 1, 0, 0]], np.float32)
-        kalman.transitionMatrix = np.array([[1, 0, 1, 0],
-                                           [0, 1, 0, 1],
-                                           [0, 0, 1, 0],
-                                           [0, 0, 0, 1]], np.float32)
-        kalman.processNoiseCov = np.array([[1, 0, 0, 0],
-                                          [0, 1, 0, 0],
-                                          [0, 0, 1, 0],
-                                          [0, 0, 0, 1]], np.float32) * 2
-        kalman.measurementNoiseCov = np.array([[1, 0],
-                                              [0, 1]], np.float32) * 0.1
+        kalman.measurementMatrix = np.array([
+            [1, 0, 0, 0],
+            [0, 1, 0, 0]
+        ], np.float32)
+
+        kalman.transitionMatrix = np.array([
+            [1, 0, 1, 0],
+            [0, 1, 0, 1],
+            [0, 0, 1, 0],
+            [0, 0, 0, 1]
+        ], np.float32)
+
+        kalman.processNoiseCov = np.array([
+            [1, 0, 0, 0],
+            [0, 1, 0, 0],
+            [0, 0, 1, 0],
+            [0, 0, 0, 1]
+        ], np.float32) * 0.1
+
+        kalman.measurementNoiseCov = np.array([
+            [1, 0],
+            [0, 1]
+        ], np.float32) * 5
+
+        kalman.errorCovPost = np.eye(4, dtype=np.float32) * 1
         return kalman
     
     def create_hsv_trackbars(self):
@@ -125,18 +160,38 @@ class RectangleDetector(Node):
         cv2.createTrackbar('LowV', 'HSV Adjust', 26, 255, lambda x: x)
         cv2.createTrackbar('HighV', 'HSV Adjust', 255, 255, lambda x: x)
 
-    def generate_path_points(self, start_vertex, end_vertex, spacing=5):
-        vector = np.array(end_vertex) - np.array(start_vertex)
-        distance_pixels = np.linalg.norm(vector)
-        if distance_pixels == 0:
-            return [start_vertex]
+    def generate_path_points(self, start_vertex, end_vertex):
+        """使用Bresenham算法生成路径点"""
+        x0, y0 = int(start_vertex[0]), int(start_vertex[1])
+        x1, y1 = int(end_vertex[0]), int(end_vertex[1])
+        points = []
 
-        num_points = max(2, int(distance_pixels // spacing) + 1)
-        t = np.linspace(0, 1, num_points)
-        path_points = [(start_vertex[0] + t[i] * vector[0],
-                        start_vertex[1] + t[i] * vector[1]) 
-                    for i in range(num_points)]
-        return path_points
+        dx = abs(x1 - x0)
+        dy = abs(y1 - y0)
+        sx = 1 if x0 < x1 else -1
+        sy = 1 if y0 < y1 else -1
+        err = dx - dy
+
+        while True:
+            points.append((x0, y0))
+            if x0 == x1 and y0 == y1:
+                break
+            e2 = 2 * err
+            if e2 > -dy:
+                err -= dy
+                x0 += sx
+            if e2 < dx:
+                err += dx
+                y0 += sy
+
+        if len(points) > self.max_path_points:
+            step = len(points) / self.max_path_points
+            points = [points[int(i * step)] for i in range(self.max_path_points)]
+        elif len(points) < self.min_path_points:
+            points = [points[int(i * len(points) / self.min_path_points)] 
+                     for i in range(self.min_path_points)]
+        
+        return points
 
     def sort_vertices_by_centroid(self, vertices, centroid):
         angles = np.arctan2(vertices[:, 1] - centroid[1], vertices[:, 0] - centroid[0])
@@ -355,19 +410,17 @@ class RectangleDetector(Node):
                     next_vertex_index = (self.target_vertex_index + self.path_direction) % num_vertices
                     next_vertex = mid_vertices[next_vertex_index]
 
-                    # 如果路径点为空，说明我们首次进入这个边，生成路径
                     if not self.current_path_points:
                         self.current_path_points = self.generate_path_points(current_vertex, next_vertex)
                         self.current_path_index = 0
                         self.get_logger().info(f'生成新路径点，数量：{len(self.current_path_points)}')
-                    # 如果路径点已走完，则开始等待切换边
                     elif self.current_path_index >= len(self.current_path_points):
                         if not self.waiting_at_vertex:
                             self.waiting_at_vertex = True
                             self.wait_start_time = time.time()
                             self.get_logger().info('到达角点，开始等待')
-                        elif time.time() - self.wait_start_time > 1.0:
-                            self.target_vertex_index = (self.target_vertex_index + self.path_direction) % num_vertices
+                        elif time.time() - self.wait_start_time > 0.0:
+                            self.target_vertex_index = next_vertex_index
                             self.waiting_at_vertex = False
                             self.current_path_points = []
                             self.current_path_index = 0
@@ -393,16 +446,11 @@ class RectangleDetector(Node):
                     self.get_logger().info(f'当前目标点距离：{target_distance_pixels:.2f} 像素')
 
                     if target_distance_pixels > self.vertex_threshold:
-                        # 计算像素坐标差值
-                        dx_pixels = target_vector[0]
-                        dy_pixels = target_vector[1]
-
-                        # 直接基于像素差值设置控制速率
-                        yaw_rate = self.yaw_step if dx_pixels > self.angular_tolerance_pixels else -self.yaw_step if dx_pixels < -self.angular_tolerance_pixels else 0.0
-                        pitch_rate = self.pitch_step if dy_pixels > self.angular_tolerance_pixels else -self.pitch_step if dy_pixels < -self.angular_tolerance_pixels else 0.0
+                        # 使用方向向量计算角速度
+                        yaw_rate, pitch_rate = self.pid_controller.compute(target_vector)
                         self.moving_to_target = True
                         self.last_target_point = target_point
-                        self.get_logger().info(f'控制云台 - yaw_rate: {yaw_rate:.2f} deg, pitch_rate: {pitch_rate:.2f} deg')
+                        self.get_logger().info(f'控制云台 - yaw_rate: {yaw_rate:.2f} deg/s, pitch_rate: {pitch_rate:.2f} deg/s')
                     else:
                         self.get_logger().info(f'到达目标点：({target_x}, {target_y})')
                         if self.initial_move:
@@ -434,9 +482,9 @@ class RectangleDetector(Node):
                             pitch_rate = 0.0
 
                 # 发送控制消息
-                angular_msg = GimbalCommand()
-                angular_msg.yaw_rate = yaw_rate
-                angular_msg.pitch_rate = pitch_rate
+                angular_msg = Twist()
+                angular_msg.angular.z = yaw_rate
+                angular_msg.angular.y = pitch_rate
                 self.publisher.publish(angular_msg)
 
                 if self.current_path_points:

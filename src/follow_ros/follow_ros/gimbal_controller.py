@@ -1,6 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from custom_msgs.msg import AngularRates
+from geometry_msgs.msg import Twist
 import serial
 from std_srvs.srv import Empty
 import time
@@ -9,7 +9,7 @@ class SerialVelocityNode(Node):
     def __init__(self):
         super().__init__('serial_velocity_node')
         self.subscription = self.create_subscription(
-            AngularRates,
+            Twist,
             'cmd_vel',
             self.cmd_vel_callback,
             10)
@@ -42,6 +42,7 @@ class SerialVelocityNode(Node):
             self.get_logger().error(f'打开串口失败: {str(e)}')
             self.ser = None
 
+
     def reset_tracker_callback(self, request, response):
         """处理/reset_tracker服务调用"""
         self.get_logger().info('接收到重置请求')
@@ -52,7 +53,7 @@ class SerialVelocityNode(Node):
     def reset_execute_callback(self, request, response):
         """处理/stop_gimbal服务调用"""
         self.get_logger().info('接收到停止请求')
-        self.mode = 0x00
+        self.mode = 0x03
         self.send_serial_packet(0, 0)
         return response
     
@@ -60,10 +61,10 @@ class SerialVelocityNode(Node):
         """处理cmd_vel话题消息"""
         try:
             # 获取yaw和pitch角度（度数）
-            yaw_angle = msg.yaw_rate  # 偏航角（度数）
-            pitch_angle = msg.pitch_rate  # 仰角（度数）
-            self.mode = 0x00
-            self.send_serial_packet(yaw_angle)
+            yaw_angle = msg.angular.z  # 偏航角（度数）
+            pitch_angle = msg.angular.y  # 仰角（度数）
+            self.mode = 0x03
+            self.send_serial_packet(yaw_angle, pitch_angle)
         except Exception as e:
             self.get_logger().error(f'处理角度消息出错: {str(e)}')
 
@@ -75,14 +76,14 @@ class SerialVelocityNode(Node):
 
         try:
             # 确定方向和绝对角度
-            yaw_direction = 0x00 if yaw_angle >= 0 else 0x01
+            yaw_direction = 0x01 if yaw_angle >= 0 else 0x00
             pitch_direction = 0x00 if pitch_angle >= 0 else 0x01
-            yaw_abs_angle = int(abs(yaw_angle))  # 取绝对值并转换为整数
-            pitch_abs_angle = int(abs(pitch_angle))
+            yaw_abs_angle = int(abs(yaw_angle*5))  # 取绝对值并转换为整数
+            pitch_abs_angle = int(abs(pitch_angle*5))
 
             # 限制角度范围
-            yaw_abs_angle = max(0, min(self.angle_limit, yaw_abs_angle))
-            pitch_abs_angle = max(0, min(self.angle_limit, pitch_abs_angle))
+            yaw_abs_angle = max(1, min(self.angle_limit, yaw_abs_angle))
+            pitch_abs_angle = max(1, min(self.angle_limit, pitch_abs_angle))
 
             # 分解为高低字节
             yaw_high = (yaw_abs_angle >> 8) & 0xFF
