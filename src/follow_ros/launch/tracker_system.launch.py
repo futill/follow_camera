@@ -28,18 +28,6 @@ def generate_launch_description():
             ]
         ),
 
-        # 启动 red_dot_tracker 节点
-        # Node(
-        #     package='follow_ros',
-        #     executable='red_dot_tracker',
-        #     name='red_dot_tracker',
-        #     output='screen',
-        #     emulate_tty=True,
-        #     parameters=[
-        #         {'log_level': 'info'}
-        #     ]
-        # ),
-
         # 启动 tape_tracker 节点
         Node(
             package='follow_ros',

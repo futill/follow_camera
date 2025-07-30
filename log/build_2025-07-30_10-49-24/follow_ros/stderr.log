@@ -1,0 +1,5 @@
+  File "/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros/tape_tracker.py", line 49
+    self.kp = 01
+              ^
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+

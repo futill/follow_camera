@@ -8,6 +8,7 @@ setup.py
 ../../build/follow_ros/follow_ros.egg-info/requires.txt
 ../../build/follow_ros/follow_ros.egg-info/top_level.txt
 ../../build/follow_ros/follow_ros.egg-info/zip-safe
+follow_ros/Emmv5.py
 follow_ros/__init__.py
 follow_ros/camer_node.py
 follow_ros/gimbal_controller.py

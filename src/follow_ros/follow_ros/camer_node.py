@@ -17,13 +17,14 @@ class follow_node(Node):
         self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1920)
         self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
         self.cap.set(cv2.CAP_PROP_FPS, 60)
+        self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG'))
 
         if not self.cap.isOpened():
             self.get_logger().error("无法打开相机")
             return
         
         # 设置回调频率为 60 Hz
-        self.timer = self.create_timer(1/30, self.timer_callback)
+        self.timer = self.create_timer(1/60, self.timer_callback)
 
     def timer_callback(self):
         ret, frame = self.cap.read()
