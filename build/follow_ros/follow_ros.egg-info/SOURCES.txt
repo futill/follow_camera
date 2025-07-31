@@ -12,6 +12,8 @@ follow_ros/Emmv5.py
 follow_ros/__init__.py
 follow_ros/camer_node.py
 follow_ros/gimbal_controller.py
+follow_ros/imu_msg.py
+follow_ros/laser_power.py
 follow_ros/red_dot_tracker.py
 follow_ros/reset_controller.py
 follow_ros/tape_tracker.py

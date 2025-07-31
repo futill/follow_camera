@@ -10,6 +10,7 @@
   <depend>rclpy</depend>
   <depend>std_msg</depend>
   <depend>cv_bridge</depend>
+  <depend>OPi</depend>
   <build_depend>follow_msg</build_depend>
   <exec_depend>follow_msg</exec_depend>
   <test_depend>ament_copyright</test_depend>

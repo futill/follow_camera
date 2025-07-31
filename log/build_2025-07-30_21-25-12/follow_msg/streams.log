@@ -1,0 +1,209 @@
+[0.033s] Invoking command in '/home/orangepi/follow_camera/build/follow_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/follow_camera/build/follow_msg -- -j8 -l8
+[0.212s] [  1%] Built target follow_msg__cpp
+[0.217s] [ 12%] Built target follow_msg__rosidl_generator_c
+[0.244s] [ 12%] Built target ament_cmake_python_copy_follow_msg
+[0.266s] [ 23%] Built target follow_msg__rosidl_typesupport_cpp
+[0.273s] [ 36%] Built target follow_msg__rosidl_typesupport_fastrtps_c
+[0.274s] [ 45%] Built target follow_msg__rosidl_typesupport_fastrtps_cpp
+[0.287s] [ 56%] Built target follow_msg__rosidl_typesupport_introspection_c
+[0.290s] [ 67%] Built target follow_msg__rosidl_typesupport_c
+[0.294s] [ 78%] Built target follow_msg__rosidl_typesupport_introspection_cpp
+[0.352s] [ 78%] Built target follow_msg
+[0.408s] [ 80%] Built target follow_msg__py
+[0.504s] [ 89%] Built target follow_msg__rosidl_generator_py
+[0.575s] [ 92%] Built target follow_msg__rosidl_typesupport_c__pyext
+[0.586s] [100%] Built target follow_msg__rosidl_typesupport_introspection_c__pyext
+[0.587s] [100%] Built target follow_msg__rosidl_typesupport_fastrtps_c__pyext
+[0.677s] running egg_info
+[0.679s] writing follow_msg.egg-info/PKG-INFO
+[0.680s] writing dependency_links to follow_msg.egg-info/dependency_links.txt
+[0.680s] writing top-level names to follow_msg.egg-info/top_level.txt
+[0.686s] reading manifest file 'follow_msg.egg-info/SOURCES.txt'
+[0.687s] writing manifest file 'follow_msg.egg-info/SOURCES.txt'
+[0.777s] [100%] Built target ament_cmake_python_build_follow_msg_egg
+[0.822s] Invoked command in '/home/orangepi/follow_camera/build/follow_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble /usr/bin/cmake --build /home/orangepi/follow_camera/build/follow_msg -- -j8 -l8
+[0.865s] Invoking command in '/home/orangepi/follow_camera/build/follow_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/follow_camera/build/follow_msg
+[0.902s] -- Install configuration: ""
+[0.902s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/rosidl_interfaces/follow_msg
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/track_red_dot.h
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__functions.c
+[0.903s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__functions.c
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__functions.c
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__functions.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__struct.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__functions.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__struct.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__functions.c
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__struct.h
+[0.904s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__functions.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__struct.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__functions.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.h
+[0.905s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tape_tracker.h
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/get_red_dot_position.h
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tracker.h
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_generator_c__visibility_control.h
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/library_path.sh
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/library_path.dsv
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_c.so
+[0.906s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_fastrtps_c.h
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_fastrtps_c.h
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_fastrtps_c.h
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_fastrtps_c.h
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg
+[0.907s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_c.so
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.c
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_introspection_c.h
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_introspection_c.h
+[0.908s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_introspection_c.h
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.c
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_introspection_c.h
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.c
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.c
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_c.so
+[0.909s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_c.so
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/get_red_dot_position.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tape_tracker.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__struct.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__traits.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__struct.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__traits.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__builder.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__builder.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.hpp
+[0.910s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__traits.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__struct.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__traits.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__struct.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__builder.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__builder.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/track_red_dot.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/reset_tracker.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_fastrtps_cpp.hpp
+[0.911s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_fastrtps_cpp.hpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_fastrtps_cpp.hpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/dds_fastrtps
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_fastrtps_cpp.hpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_fastrtps_cpp.so
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__type_support.cpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__rosidl_typesupport_introspection_cpp.hpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__type_support.cpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/track_red_dot__rosidl_typesupport_introspection_cpp.hpp
+[0.912s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__rosidl_typesupport_introspection_cpp.hpp
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/get_red_dot_position__type_support.cpp
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tape_tracker__type_support.cpp
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/include/follow_msg/follow_msg/action/detail/reset_tracker__rosidl_typesupport_introspection_cpp.hpp
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_introspection_cpp.so
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_typesupport_cpp.so
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/pythonpath.sh
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/pythonpath.dsv
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info
+[0.913s] -- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/top_level.txt
+[0.913s] -- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.913s] -- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/PKG-INFO
+[0.913s] -- Installing: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tracker_s.c
+[0.913s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_get_red_dot_position_s.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tape_tracker_s.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tracker.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_reset_tape_tracker.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_track_red_dot.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/__init__.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_track_red_dot_s.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action/_get_red_dot_position.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_c.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/__init__.py
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/libfollow_msg__rosidl_generator_py.so
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/_follow_msg_s.ep.rosidl_typesupport_introspection_c.c
+[0.914s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.984s] Listing '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg'...
+[0.984s] Listing '/home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/action'...
+[0.997s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-aarch64-linux-gnu.so
+[0.998s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_introspection_c.cpython-310-aarch64-linux-gnu.so
+[0.999s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/local/lib/python3.10/dist-packages/follow_msg/follow_msg_s__rosidl_typesupport_c.cpython-310-aarch64-linux-gnu.so
+[0.999s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/lib/libfollow_msg__rosidl_generator_py.so
+[1.000s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/TrackRedDot.idl
+[1.001s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTapeTracker.idl
+[1.001s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTracker.idl
+[1.002s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/GetRedDotPosition.idl
+[1.002s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/TrackRedDot.action
+[1.002s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTapeTracker.action
+[1.003s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/ResetTracker.action
+[1.003s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/action/GetRedDotPosition.action
+[1.004s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/package_run_dependencies/follow_msg
+[1.005s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/parent_prefix_path/follow_msg
+[1.007s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/ament_prefix_path.sh
+[1.008s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/ament_prefix_path.dsv
+[1.009s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/path.sh
+[1.010s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/environment/path.dsv
+[1.011s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.bash
+[1.011s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.sh
+[1.012s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.zsh
+[1.013s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/local_setup.dsv
+[1.014s] -- Installing: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/package.dsv
+[1.014s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/ament_index/resource_index/packages/follow_msg
+[1.015s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cExport.cmake
+[1.015s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cExport-noconfig.cmake
+[1.018s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[1.019s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.019s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cExport.cmake
+[1.020s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.021s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cExport.cmake
+[1.022s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cExport-noconfig.cmake
+[1.022s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_cppExport.cmake
+[1.023s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.023s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.024s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cppExport.cmake
+[1.025s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.025s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cppExport.cmake
+[1.026s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[1.027s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_pyExport.cmake
+[1.027s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/export_follow_msg__rosidl_generator_pyExport-noconfig.cmake
+[1.028s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake-extras.cmake
+[1.028s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.028s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.029s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[1.030s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/ament_cmake_export_targets-extras.cmake
+[1.031s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.032s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.032s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msgConfig.cmake
+[1.032s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/cmake/follow_msgConfig-version.cmake
+[1.032s] -- Up-to-date: /home/orangepi/follow_camera/install/follow_msg/share/follow_msg/package.xml
+[1.033s] Invoked command in '/home/orangepi/follow_camera/build/follow_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/orangepi/follow_camera/install/follow_ros:/home/orangepi/car_ros2/install/rknn_yolo:/opt/ros/humble /usr/bin/cmake --install /home/orangepi/follow_camera/build/follow_msg

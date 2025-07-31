@@ -22,6 +22,7 @@ setup(
     entry_points={
         'console_scripts': [
             'camer_node = follow_ros.camer_node:main',
+            'imu_msg = follow_ros.imu_msg:main',
             'reset_controller = follow_ros.reset_controller:main',
             'red_dot_tracker = follow_ros.red_dot_tracker:main',
             'tape_tracker = follow_ros.tape_tracker:main',

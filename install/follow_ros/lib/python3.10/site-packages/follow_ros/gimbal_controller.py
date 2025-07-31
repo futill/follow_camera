@@ -8,106 +8,178 @@ import time
 class SerialVelocityNode(Node):
     def __init__(self):
         super().__init__('serial_velocity_node')
-
         self.subscription = self.create_subscription(
             Twist,
             'cmd_vel',
             self.cmd_vel_callback,
             10)
 
-        self.stop_service = self.create_service(
+        self.reset_server = self.create_service(
             Empty,
             '/stop_gimbal',
-            self.reset_execute_callback
+            self.stop_execute_callback
         )
 
-        self.reset_service = self.create_service(
+        self.reset_server = self.create_service(
             Empty,
             '/reset_tracker',
             self.reset_tracker_callback
         )
 
         # 声明模式选择参数
-        self.declare_parameter('mode', 0x00)
+        self.declare_parameter('mode', 0x00)  # 默认模式为 0x00
         self.mode = self.get_parameter('mode').get_parameter_value().integer_value
         self.get_logger().info(f'串口节点已启动，模式: {hex(self.mode)}')
 
         # 串口配置
-        self.serial_port = '/dev/ttyS0'  # 视你的设备而定
+        self.serial_port = '/dev/ttyS0'  # 可根据实际设备修改
         self.baud_rate = 115200
-        self.angle_limit = 36 * 5  # 180度 × 5
-        self.address = 0x01  # 假设设备地址为 0x01，可修改
-
+        self.angle_limit = 60  # 角度限幅，单位：度数，范围[-180, 180]
         try:
             self.ser = serial.Serial(self.serial_port, self.baud_rate, timeout=1)
-            self.get_logger().info(f'串口 {self.serial_port} 打开成功，波特率 {self.baud_rate}')
+            #self.get_logger().info(f'串口 {self.serial_port} 打开成功，波特率 {self.baud_rate}')
         except serial.SerialException as e:
             self.get_logger().error(f'打开串口失败: {str(e)}')
             self.ser = None
 
+
     def reset_tracker_callback(self, request, response):
+        """处理/reset_tracker服务调用"""
         self.get_logger().info('接收到重置请求')
-        self.mode = 0x01
-        self.send_serial_packet(0, 0)
+        self.send_laser_power_RETRUN()
         return response
-
-    def reset_execute_callback(self, request, response):
+    
+    def stop_execute_callback(self, request, response):
+        """处理/stop_gimbal服务调用"""
         self.get_logger().info('接收到停止请求')
-        self.mode = 0x03
-        self.send_serial_packet(0, 0)
+        self.send_laser_power_OFF()
         return response
-
+    
     def cmd_vel_callback(self, msg):
+        """处理cmd_vel话题消息"""
         try:
-            yaw_angle = msg.angular.z
-            pitch_angle = msg.angular.y
-            self.mode = 0x03
-            self.send_serial_packet(yaw_angle, pitch_angle)
+            # 获取yaw和pitch角度（度数）
+            yaw_angle = msg.angular.z  # 偏航角（度数）
+            pitch_angle = msg.angular.y  # 仰角（度数）
+            mode = msg.angular.x
+            if mode == 1.0:
+                self.send_serial_packet(yaw_angle, pitch_angle)
+            elif mode == 2.0:
+                self.send_laser_power_ON()
+            elif mode == 3.0:
+                self.send_laser_power_OFF()
+            elif mode == 4.0:
+                self.send_laser_power_RETRUN()
         except Exception as e:
             self.get_logger().error(f'处理角度消息出错: {str(e)}')
 
-    def send_serial_packet(self, yaw_angle, pitch_angle):
-        if self.ser is None:
-            self.get_logger().warning('串口未初始化，无法发送数据')
+    def send_laser_power_ON(self):
+        """构建并发送串口数据包（角度）"""
+        if self.ser is None or not self.ser.is_open:
+            self.get_logger().error('串口未打开，跳过发送')
             return
 
-        # 方向判断：0x00 = CW, 0x01 = CCW
-        yaw_dir = 0x01 if yaw_angle >= 0 else 0x00
-        pitch_dir = 0x01 if pitch_angle >= 0 else 0x00
-        
+        try:
+            # 构建协议数据
+            packet = [
+                0xC7,0xC8,  # 起始字节
+                0x00, 0x00,    # yaw角度高低字节
+                0x5D
+            ]
+            # 发送串口数据
+            self.ser.write(bytes(packet))
+            time.sleep(0.02)  # 确保数据发送完成
+            #self.get_logger().info(f'发送串口数据: {packet}')
 
-        # 将角度转换为“速度值”，乘以比例系数
-        yaw_speed = int(min(max(abs(yaw_angle * 5), 0), self.angle_limit))
-        pitch_speed = int(min(max(abs(pitch_angle * 5), 0), self.angle_limit))
+        except serial.SerialException as e:
+            self.get_logger().error(f'串口发送失败: {str(e)}')
 
-        # 分别发送 yaw 和 pitch 命令（可按实际协议合并）
-        self.send_speed_command(2, yaw_dir, yaw_speed)
-        time.sleep(0.02)
-        self.send_speed_command(1, pitch_dir, pitch_speed)
-        time.sleep(0.02)
-
-    def send_speed_command(self, address: int, direction: int, speed_rpm: int):
-        speed_high = (speed_rpm >> 8) & 0xFF
-        speed_low = speed_rpm & 0xFF
-
-        cmd = [
-            address & 0xFF,
-            0xF6,
-            direction & 0x01,
-            speed_high,
-            speed_low,
-            0x00,  # 加速度档位
-            0x00,  # 同步位
-            0x6B   # 校验或结束标志，需根据协议替换
-        ]
+    def send_laser_power_OFF(self):
+        """构建并发送串口数据包（角度）"""
+        if self.ser is None or not self.ser.is_open:
+            self.get_logger().error('串口未打开，跳过发送')
+            return
 
         try:
-            self.ser.write(bytes(cmd))
-            # self.get_logger().info(f'发送命令: {cmd}')
+            # 构建协议数据
+            packet = [
+                0xC7,0xC8,  # 起始字节
+                0x00, 0x01,    # yaw角度高低字节
+                0x5D
+            ]
+            # 发送串口数据
+            self.ser.write(bytes(packet))
+            time.sleep(0.02)  # 确保数据发送完成
+            #self.get_logger().info(f'发送串口数据: {packet}')
+
         except serial.SerialException as e:
-            self.get_logger().error(f'串口写入失败: {str(e)}')
+            self.get_logger().error(f'串口发送失败: {str(e)}')
+
+    def send_laser_power_RETRUN(self):
+        """构建并发送串口数据包（角度）"""
+        if self.ser is None or not self.ser.is_open:
+            self.get_logger().error('串口未打开，跳过发送')
+            return
+
+        try:
+            # 构建协议数据
+            packet = [
+                0xC5,0xC6,  # 起始字节
+                0x00, 0x02,    # yaw角度高低字节
+                0x4D
+            ]
+            # 发送串口数据
+            self.ser.write(bytes(packet))
+            time.sleep(0.02)  # 确保数据发送完成
+            #self.get_logger().info(f'发送串口数据: {packet}')
+
+        except serial.SerialException as e:
+            self.get_logger().error(f'串口发送失败: {str(e)}')
+
+
+    def send_serial_packet(self, yaw_angle, pitch_angle):
+        """构建并发送串口数据包（角度）"""
+        if self.ser is None or not self.ser.is_open:
+            self.get_logger().error('串口未打开，跳过发送')
+            return
+
+        try:
+            # 确定方向和绝对角度
+            yaw_direction = 0x01 if yaw_angle >= 0 else 0x00
+            pitch_direction = 0x01 if pitch_angle >= 0 else 0x00
+            yaw_abs_angle = int(abs(yaw_angle))  # 取绝对值并转换为整数
+            pitch_abs_angle = int(abs(pitch_angle))
+
+            # 限制角度范围
+            yaw_abs_angle = max(0, min(self.angle_limit, yaw_abs_angle))
+            pitch_abs_angle = max(0, min(self.angle_limit, pitch_abs_angle))
+
+            # 分解为高低字节
+            yaw_high = (yaw_abs_angle >> 8) & 0xFF
+            yaw_low = yaw_abs_angle & 0xFF
+            pitch_high = (pitch_abs_angle >> 8) & 0xFF
+            pitch_low = pitch_abs_angle & 0xFF
+
+            # 构建协议数据
+            packet = [
+                0xA5,0xA6,  # 起始字节
+                yaw_direction,   # yaw方向
+                pitch_direction, # pitch方向
+                yaw_high, yaw_low,    # yaw角度高低字节
+                pitch_high, pitch_low,  # pitch角度高低字节
+                0x6B, 0x5B  # 结束字节
+            ]
+
+            # 发送串口数据
+            self.ser.write(bytes(packet))
+            time.sleep(0.02)  # 确保数据发送完成
+            self.get_logger().info(f'发送串口数据: {packet}')
+
+        except serial.SerialException as e:
+            self.get_logger().error(f'串口发送失败: {str(e)}')
 
     def set_mode(self, mode):
+        """接口：设置模式选择字节"""
         if 0 <= mode <= 255:
             self.mode = mode
             self.get_logger().info(f'模式更新为: {hex(self.mode)}')
@@ -115,6 +187,7 @@ class SerialVelocityNode(Node):
             self.get_logger().error(f'无效模式值: {mode}，必须在 [0, 255] 范围内')
 
     def destroy_node(self):
+        """节点销毁时关闭串口"""
         if self.ser and self.ser.is_open:
             self.ser.close()
             self.get_logger().info('串口已关闭')

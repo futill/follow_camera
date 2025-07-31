@@ -1,3 +1,0 @@
-# red_dot_interfaces/srv/GetRedDotPosition.srv
----
-geometry_msgs/Point response

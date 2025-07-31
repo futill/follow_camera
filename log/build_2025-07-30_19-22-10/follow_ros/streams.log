@@ -1,0 +1,28 @@
+[1.107s] Invoking command in '/home/orangepi/follow_camera/src/follow_ros': LD_LIBRARY_PATH=/home/orangepi/follow_camera/install/follow_msg/lib:/usr/local/lib:/usr/local/lib:/home/orangepi/uvg_car/install/oakchina_vio_package/lib:/home/orangepi/uvg_car/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/orangepi/follow_camera/build/follow_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/follow_ros build --build-base /home/orangepi/follow_camera/build/follow_ros/build install --record /home/orangepi/follow_camera/build/follow_ros/install.log --single-version-externally-managed install_data
+[1.469s] running egg_info
+[1.469s] writing ../../build/follow_ros/follow_ros.egg-info/PKG-INFO
+[1.470s] writing dependency_links to ../../build/follow_ros/follow_ros.egg-info/dependency_links.txt
+[1.470s] writing entry points to ../../build/follow_ros/follow_ros.egg-info/entry_points.txt
+[1.471s] writing requirements to ../../build/follow_ros/follow_ros.egg-info/requires.txt
+[1.471s] writing top-level names to ../../build/follow_ros/follow_ros.egg-info/top_level.txt
+[1.473s] reading manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'
+[1.474s] writing manifest file '../../build/follow_ros/follow_ros.egg-info/SOURCES.txt'
+[1.474s] running build
+[1.475s] running build_py
+[1.475s] copying follow_ros/gimbal_controller.py -> /home/orangepi/follow_camera/build/follow_ros/build/lib/follow_ros
+[1.476s] running install
+[1.476s] running install_lib
+[1.477s] copying /home/orangepi/follow_camera/build/follow_ros/build/lib/follow_ros/gimbal_controller.py -> /home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros
+[1.478s] byte-compiling /home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros/gimbal_controller.py to gimbal_controller.cpython-310.pyc
+[1.480s] running install_data
+[1.480s] running install_egg_info
+[1.483s] removing '/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info' (and everything under it)
+[1.484s] Copying ../../build/follow_ros/follow_ros.egg-info to /home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages/follow_ros-0.0.0-py3.10.egg-info
+[1.485s] running install_scripts
+[1.519s] Installing camer_node script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.519s] Installing gimbal_controller script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.520s] Installing red_dot_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.520s] Installing reset_controller script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.520s] Installing tape_tracker script to /home/orangepi/follow_camera/install/follow_ros/lib/follow_ros
+[1.520s] writing list of installed files to '/home/orangepi/follow_camera/build/follow_ros/install.log'
+[1.615s] Invoked command in '/home/orangepi/follow_camera/src/follow_ros' returned '0': LD_LIBRARY_PATH=/home/orangepi/follow_camera/install/follow_msg/lib:/usr/local/lib:/usr/local/lib:/home/orangepi/uvg_car/install/oakchina_vio_package/lib:/home/orangepi/uvg_car/install/lslidar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/orangepi/follow_camera/build/follow_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/orangepi/follow_camera/install/follow_ros/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/follow_ros build --build-base /home/orangepi/follow_camera/build/follow_ros/build install --record /home/orangepi/follow_camera/build/follow_ros/install.log --single-version-externally-managed install_data

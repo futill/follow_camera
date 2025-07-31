@@ -29,37 +29,56 @@ class ResetController(Node):
     def create_gui(self):
         """创建 Tkinter GUI 界面"""
         self.root.title("Reset Controller")
-        self.root.geometry("300x200")
+        self.root.geometry("300x300")  # 增加高度以容纳更多按钮
 
-        # Reset Red Dot Tracker 按钮
+        # 原有按钮
         btn_reset_red_dot = tk.Button(
             self.root,
-            text="Reset Red Dot Tracker",
+            text="复位",
             command=self.send_reset_tracker,
             font=("Arial", 12),
             width=20
         )
         btn_reset_red_dot.pack(pady=10)
 
-        # Reset Tape Tracker 按钮
         btn_reset_tape = tk.Button(
             self.root,
-            text="Reset Tape Tracker",
+            text="打开摄像头1",
             command=self.send_reset_tape_tracker,
             font=("Arial", 12),
             width=20
         )
         btn_reset_tape.pack(pady=10)
 
-        # Stop Gimbal 按钮
         btn_stop_gimbal = tk.Button(
             self.root,
-            text="Stop Gimbal",
+            text="关闭激光",
             command=self.send_stop_gimbal,
             font=("Arial", 12),
             width=20
         )
         btn_stop_gimbal.pack(pady=10)
+
+        # 新增按钮 1
+        btn_custom_1 = tk.Button(
+            self.root,
+            text="打开摄像头2",
+            command=self.custom_function_1,
+            font=("Arial", 12),
+            width=20
+        )
+        btn_custom_1.pack(pady=10)
+
+        # 新增按钮 2
+        btn_custom_2 = tk.Button(
+            self.root,
+            text="打开摄像头3",
+            command=self.custom_function_2,
+            font=("Arial", 12),
+            width=20
+        )
+        btn_custom_2.pack(pady=10)
+
 
     def spin_node(self):
         """在单独线程中运行 ROS 节点"""
@@ -121,6 +140,16 @@ class ResetController(Node):
             self.get_logger().info("StopGimbal 服务调用成功")
         except Exception as e:
             self.get_logger().error(f"StopGimbal 服务调用失败: {str(e)}")
+
+    def custom_function_1(self):
+        """自定义功能 1 的回调函数"""
+        self.get_logger().info("按钮 自定义功能 1 被点击")
+        # TODO: 在此添加你希望执行的ROS调用或逻辑
+
+    def custom_function_2(self):
+        """自定义功能 2 的回调函数"""
+        self.get_logger().info("按钮 自定义功能 2 被点击")
+        # TODO: 在此添加你希望执行的ROS调用或逻辑
 
 def main(args=None):
     rclpy.init(args=args)
